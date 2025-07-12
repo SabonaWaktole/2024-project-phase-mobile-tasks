@@ -4,6 +4,9 @@ import 'ProductClass.dart';
 void main(){
 
   Ecommerce ecommerce = Ecommerce();
+
+  
+
   print("Welcome to the Ecommerce Application");
   print("Please choose an option:");
   print("1. Add Product");
@@ -47,13 +50,15 @@ void main(){
     case 4:{
       print("Enter product name to delete:");
       String name = stdin.readLineSync() ?? '';
+      if (ecommerce.viewProductInEcommerce(name).name.isEmpty) {
+        break;
+      }
       try{
         ecommerce.deleteProductFromEcommerce(name);
         print("Product deleted successfully!");
       }catch (e) {
         print(e);
       }
-      ecommerce.deleteProductFromEcommerce(name);
     }
     break;
     case 5:{
@@ -111,6 +116,8 @@ void main(){
 
   choice = newChoice;
   }
+
+  print(ecommerce.Products);
 }
 
 

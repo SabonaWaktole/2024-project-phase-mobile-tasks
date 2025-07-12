@@ -33,11 +33,13 @@ class ProductManager{
     }
   }
   
-  void deleteProduct(String name){
+  bool deleteProduct(String name){
     if(Products.containsKey(name)){
       Products.remove(name);
+      return true;
     } else{
       print("Product not found");
+      return false;
     }
   }
 
