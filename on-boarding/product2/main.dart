@@ -87,7 +87,7 @@ void main(){
 
       print("the price you entered is ${newPrice}");
 
-      print('/n new price is    ${newPrice}');
+      print('new price is    ${newPrice}');
 
       Product updatedNewProduct = Product(newName, newDescription, newPrice);
       print('Updated Product Name: ${updatedNewProduct.name}, Price: ${updatedNewProduct.price}, Description: ${updatedNewProduct.description ?? "No description"}');
@@ -117,19 +117,7 @@ void main(){
   choice = newChoice;
   }
 
-  print(ecommerce.Products);
 }
 
 
 
-bool handleProductBehavior(Product product) {
-  try {
-    if (product.name.isEmpty || product.price <= 0) {
-      throw Exception("Invalid Product details");
-    }
-    return true;
-  } catch (e) {
-    print(e);
-    return false;
-  }
-}
