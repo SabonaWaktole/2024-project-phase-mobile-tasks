@@ -59,11 +59,17 @@ void main(){
     case 5:{
       print("Enter product name you wanna update");
       String name = stdin.readLineSync() ?? '';
+      if (name.isEmpty) {
+        print("Product name cannot be empty");
+        break;
+      }
       Product oldProduct = ecommerce.viewSingleProduct(name);
+
       if (oldProduct.name.isEmpty) {
         print("Product not found");
         break;
       }
+
       print('Current Product Name: ${oldProduct.name}, Price: ${oldProduct.price}, Description: ${oldProduct.description ?? "No description"}');
       print('Enter new product name (current: ${oldProduct.name}): if you want to keep it, just press enter');
       String newName = stdin.readLineSync() ?? oldProduct.name;
@@ -71,7 +77,10 @@ void main(){
       String? newDescription = stdin.readLineSync() ?? oldProduct.description;
       print('Enter new product price (current: ${oldProduct.price}): if you want to keep it, just press enter');
       String oldPrice = oldProduct.price.toString();
-      double newPrice = double.parse(stdin.readLineSync() ?? '0');
+      String Price = stdin.readLineSync() ?? oldPrice;
+      double newPrice = Price.isEmpty ? oldProduct.price : double.parse(Price);
+
+      print("the price you entered is ${newPrice}");
 
       print('/n new price is    ${newPrice}');
 
@@ -85,19 +94,13 @@ void main(){
       }
     }
     break;
-
-    case 6:{
-      print("Exiting the application. Thank you!");
-      exit(0);
-    }
     default:{
       print('exited the program');
     }
     break;
   }
 
-  print("Welcome to the Ecommerce Application");
-  print("Please choose an option:");
+  print("Please enter your option:");
   print("1. Add Product");
   print("2. View All Products");
   print("3. View Single Product");
@@ -107,5 +110,19 @@ void main(){
   int newChoice = int.parse(stdin.readLineSync() ?? '0');
 
   choice = newChoice;
+  }
+}
+
+
+
+bool handleProductBehavior(Product product) {
+  try {
+    if (product.name.isEmpty || product.price <= 0) {
+      throw Exception("Invalid Product details");
+    }
+    return true;
+  } catch (e) {
+    print(e);
+    return false;
   }
 }
