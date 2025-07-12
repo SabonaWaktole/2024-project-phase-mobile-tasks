@@ -117,7 +117,6 @@ void main(){
   choice = newChoice;
   }
 
-  print(ecommerce.Products);
 }
 
 
