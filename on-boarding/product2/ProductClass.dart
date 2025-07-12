@@ -12,8 +12,11 @@ class Product{
 
 }
 
-class Productanager{
+class ProductManager{
+
+  
   Map<String,Product> Products = {};
+  
 
   void addProduct(Product product){
     Products[product.name] = product;
@@ -28,7 +31,8 @@ class Productanager{
     if(Products.containsKey(name)){
       return Products[name]!;
     } else{
-      throw Exception("Product not found");
+      print("Product not found");
+      return Product('', null, 0.0); // Return a default product or handle as needed
     }
   }
   
@@ -36,9 +40,15 @@ class Productanager{
     if(Products.containsKey(name)){
       Products.remove(name);
     } else{
-      throw Exception("Product not found");
+      print("Product not found");
     }
   }
 
-  
+  void updateProduct(String name, Product product) {
+    if (Products.containsKey(name)) {
+      Products[name] = product;
+    } else {
+    print("Product not found");
+    }
   }
+}
