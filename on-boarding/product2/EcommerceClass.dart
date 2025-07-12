@@ -1,12 +1,17 @@
 import 'ProductClass.dart';
 
 class Ecommerce extends ProductManager{
+
+  Ecommerce() {
+    this.Products = {};
+  }
   void addProductToEcommerce(Product product) {
     addProduct(product);
   }
 
-  void deleteProductFromEcommerce(String name) {
-    deleteProduct(name);
+  bool deleteProductFromEcommerce(String name) {
+    
+    return deleteProduct(name);
   }
 
   void viewAllProductsInEcommerce() {
