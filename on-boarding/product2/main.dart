@@ -122,14 +122,3 @@ void main(){
 
 
 
-bool handleProductBehavior(Product product) {
-  try {
-    if (product.name.isEmpty || product.price <= 0) {
-      throw Exception("Invalid Product details");
-    }
-    return true;
-  } catch (e) {
-    print(e);
-    return false;
-  }
-}
