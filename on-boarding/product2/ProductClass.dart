@@ -4,9 +4,6 @@ class Product{
   double price;
 
   Product(this.name, this.description, this.price){
-    if(name.isEmpty || price <= 0){
-      throw Exception("Invalid Product details");
-    }
   }
 
 
