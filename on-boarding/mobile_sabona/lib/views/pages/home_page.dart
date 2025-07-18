@@ -50,6 +50,7 @@ class _HomePageState extends State<HomePage> {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            SizedBox(height: 20,),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15.0),
 
@@ -58,12 +59,13 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   Text(
                     "Available Products",
-                    style: TextStyle(fontSize: 25, fontWeight: FontWeight.w600),
+                    style: TextStyle(fontSize: 30, fontWeight: FontWeight.w600),
                   ),
-                  Icon(Icons.search),
+                  Icon(Icons.search, size: 40,),
                 ],
               ),
             ),
+            SizedBox(height: 20,),
             Padding(
               padding: EdgeInsetsGeometry.fromLTRB(16.0, 10.0, 10.0, 8.0),
 
