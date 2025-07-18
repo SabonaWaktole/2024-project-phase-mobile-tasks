@@ -27,24 +27,23 @@ class _SearchPageState extends State<SearchPage> {
         children: [
           Row(
             children: [
-              SizedBox(width: 30),
+              SizedBox(width: 20),
               Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 10, 0, 15),
-                  child: TextField(
-                    decoration: InputDecoration(
-                      suffixIcon: Icon(
-                        Icons.arrow_forward,
-                        color: Colors.blueAccent,
-                      ),
-                      fillColor: Color.fromARGB(255, 231, 231, 231),
-                      filled: true,
-                      border: OutlineInputBorder(
-                        borderSide: BorderSide.none,
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      hintText: "Leather",
+                child: TextField(
+                  decoration: InputDecoration(
+                    
+                    suffixIcon: Icon(
+                      Icons.arrow_forward,
+                      color: Color.fromARGB(255, 63, 81, 243),
+                      size: 28,
                     ),
+                    fillColor: Color.fromARGB(255, 255, 255, 255),
+                    filled: true,
+                    contentPadding: EdgeInsets.symmetric(horizontal: 10),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    hintText: "Leather",
                   ),
                 ),
               ),
@@ -52,146 +51,157 @@ class _SearchPageState extends State<SearchPage> {
               ElevatedButton(
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color.fromARGB(255, 10, 6, 231),
+                  backgroundColor: const Color.fromARGB(255, 63, 81, 243),
                   foregroundColor: Colors.white,
-                  padding: EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+                  padding: EdgeInsets.all(10),
+                  minimumSize: Size(50, 45),
 
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
+                    borderRadius: BorderRadius.circular(8),
                   ),
                 ),
-                child: Icon(Icons.filter_list, size: 40),
+                child: Icon(Icons.filter_list, size: 25),
               ),
-
-              SizedBox(width: 30),
+              SizedBox(width: 10),
             ],
           ),
+          SizedBox(height: 20,),
           Expanded(
             child: SingleChildScrollView(
               child: Column(
                 children: [
                   Padding(
-                    padding: EdgeInsetsGeometry.fromLTRB(16.0, 10.0, 10.0, 8.0),
-            
-                    //TODO retrive this child from widgetbuilder
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: const Color.fromARGB(255, 227, 227, 228),
-                        borderRadius: BorderRadius.circular(16),
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children: [
-                          ClipRRect(
-                            borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(16),
-                              topRight: Radius.circular(16),
-                            ),
-                            child: SizedBox(
-                              height: 200,
-                              width: 300,
-                              child: Image.asset(
-                                'assets/images/image.png',
-                                fit: BoxFit.cover,
+                    padding: const EdgeInsets.fromLTRB(16.0, 10.0, 10.0, 8.0),
+                    child: Material(
+                      elevation: 4,
+                      borderRadius: BorderRadius.circular(16),
+                      color: Colors.transparent,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: const Color.fromARGB(255, 255, 255, 255),
+                          borderRadius: BorderRadius.circular(16),
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: [
+                            ClipRRect(
+                              borderRadius: const BorderRadius.only(
+                                topLeft: Radius.circular(16),
+                                topRight: Radius.circular(16),
+                              ),
+                              child: SizedBox(
+                                height: 200,
+                                width: 300,
+                                child: Image.asset(
+                                  'assets/images/image.png',
+                                  fit: BoxFit.cover,
+                                ),
                               ),
                             ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 15.0),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      "Leather shoes",
-                                      style: TextStyle(
-                                        fontSize: 25,
-                                        fontWeight: FontWeight.w600,
+                            const Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 15.0),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        "Leather shoes",
+                                        style: TextStyle(
+                                          fontSize: 25,
+                                          fontWeight: FontWeight.w600,
+                                        ),
                                       ),
-                                    ),
-                                    Text("Men's shoe", style: GoogleFonts.abel()),
-                                  ],
-                                ),
-            
-                                Column(
-                                  children: [
-                                    Text("\$120"),
-                                    Row(
-                                      children: [
-                                        Icon(Icons.star, color: Colors.amber),
-                                        Text("(4.0)", style: GoogleFonts.abel()),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              ],
+                                      Text("Men's shoe"),
+                                    ],
+                                  ),
+                                  Column(
+                                    children: [
+                                      Text("\$120"),
+                                      Row(
+                                        children: [
+                                          Icon(Icons.star, color: Colors.amber),
+                                          Text("(4.0)"),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
                   ),
+
                   Padding(
-                    padding: EdgeInsetsGeometry.fromLTRB(16.0, 10.0, 10.0, 8.0),
-            
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: const Color.fromARGB(255, 227, 227, 228),
-                        borderRadius: BorderRadius.circular(16),
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children: [
-                          ClipRRect(
-                            borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(16),
-                              topRight: Radius.circular(16),
-                            ),
-                            child: SizedBox(
-                              height: 200,
-                              width: 300,
-                              child: Image.asset(
-                                'assets/images/image.png',
-                                fit: BoxFit.cover,
+                    padding: const EdgeInsets.fromLTRB(16.0, 10.0, 10.0, 8.0),
+                    child: Material(
+                      elevation: 4,
+                      borderRadius: BorderRadius.circular(16),
+                      color: Colors.transparent,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: const Color.fromARGB(255, 255, 255, 255),
+                          borderRadius: BorderRadius.circular(16),
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: [
+                            ClipRRect(
+                              borderRadius: const BorderRadius.only(
+                                topLeft: Radius.circular(16),
+                                topRight: Radius.circular(16),
+                              ),
+                              child: SizedBox(
+                                height: 200,
+                                width: 300,
+                                child: Image.asset(
+                                  'assets/images/image.png',
+                                  fit: BoxFit.cover,
+                                ),
                               ),
                             ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 15.0),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      "Leather shoes",
-                                      style: TextStyle(
-                                        fontSize: 25,
-                                        fontWeight: FontWeight.w600,
+                            const Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 15.0),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        "Leather shoes",
+                                        style: TextStyle(
+                                          fontSize: 25,
+                                          fontWeight: FontWeight.w600,
+                                        ),
                                       ),
-                                    ),
-                                    Text("Men's shoe", style: GoogleFonts.abel()),
-                                  ],
-                                ),
-            
-                                Column(
-                                  children: [
-                                    Text("\$120"),
-                                    Row(
-                                      children: [
-                                        Icon(Icons.star, color: Colors.amber),
-                                        Text("(4.0)", style: GoogleFonts.abel()),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              ],
+                                      Text("Men's shoe"),
+                                    ],
+                                  ),
+                                  Column(
+                                    children: [
+                                      Text("\$120"),
+                                      Row(
+                                        children: [
+                                          Icon(Icons.star, color: Colors.amber),
+                                          Text("(4.0)"),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
                   ),
@@ -209,38 +219,53 @@ class _SearchPageState extends State<SearchPage> {
                   padding: const EdgeInsets.fromLTRB(0, 10, 0, 15),
                   child: TextField(
                     decoration: InputDecoration(
-                      fillColor: const Color.fromARGB(255, 231, 231, 231),
+                      fillColor: const Color.fromARGB(255, 255, 255, 255),
 
                       filled: true,
+
+                      // enabledBorder: OutlineInputBorder(),
                       border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide.none,
+                        borderRadius: BorderRadius.circular(15),
                       ),
                     ),
                   ),
                 ),
 
                 Text("price"),
-                RangeSlider(
-                  
-                  activeColor: Colors.blueAccent,
-                  values: RangeValues(20, 80),
-                  min: 0,
-                  max: 100,
-                  divisions: 10,
-                  labels: RangeLabels(
-                    RangeValues(20, 80).start.round().toString(),
-                    RangeValues(20, 80).end.round().toString(),
+                SliderTheme(
+                  data: SliderTheme.of(context).copyWith(
+                    activeTrackColor: Color.fromARGB(255, 63, 81, 243),
+                    inactiveTrackColor: Colors.grey[300],
+                    trackHeight: 6.0,
+                    thumbColor: Colors.white,
+                    overlayColor: Color.fromARGB(255, 63, 81, 243),
+                    thumbShape: const RoundSliderThumbShape(
+                      enabledThumbRadius: 4.0,
+                    ),
+                    overlayShape: const RoundSliderOverlayShape(
+                      overlayRadius: 20.0,
+                    ),
+                    rangeThumbShape: const RoundRangeSliderThumbShape(
+                      enabledThumbRadius: 5,
+                    ),
+                    rangeTrackShape: const RoundedRectRangeSliderTrackShape(),
                   ),
-                  onChanged: (RangeValues values) {
-                    setState(() {});
-                  },
+                  child: RangeSlider(
+                    values: RangeValues(20, 80),
+                    min: 0,
+                    max: 100,
+                    divisions: 100,
+                    labels: RangeLabels("20", "80"),
+                    onChanged: (RangeValues values) {
+                      setState(() {});
+                    },
+                  ),
                 ),
                 SizedBox(height: 20),
                 ElevatedButton(
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color.fromARGB(255, 10, 6, 231),
+                    backgroundColor: const Color.fromARGB(255, 63, 81, 243),
                     foregroundColor: Colors.white,
                     padding: EdgeInsets.symmetric(
                       horizontal: 160,
@@ -251,7 +276,7 @@ class _SearchPageState extends State<SearchPage> {
                       borderRadius: BorderRadius.circular(12),
                     ),
                   ),
-                  child: Text("apply"),
+                  child: Text("APPLY"),
                 ),
                 SizedBox(height: 30),
               ],

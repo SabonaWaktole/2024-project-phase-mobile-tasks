@@ -16,8 +16,7 @@ class _DetailPageState extends State<DetailPage> {
         child: SizedBox(
           width: double.infinity,
           child: Column(
-            crossAxisAlignment:
-                CrossAxisAlignment.stretch, 
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               SizedBox(
                 height: 300,
@@ -29,17 +28,24 @@ class _DetailPageState extends State<DetailPage> {
                     Align(
                       alignment: Alignment.topLeft,
                       child: Padding(
-                        padding: EdgeInsets.fromLTRB(
-                          20,
-                          40,
-                          10,
-                          5,
-                        ), 
-                        child: Icon(
-                          Icons.arrow_back_ios,
-                          color: Color.fromARGB(255, 42, 4, 131),
+                        padding: EdgeInsets.fromLTRB(30, 40, 10, 5),
+                        child: Container(
+                          padding: EdgeInsets.all(5),
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Colors.white,
+                          ),
+                          child: Icon(
+                            Icons.arrow_back_ios,
+                            color: Color.fromARGB(255,63,81,243),
+                          ),
                         ),
                       ),
+
+
+
+
+
                     ),
                   ],
                 ),
@@ -86,26 +92,22 @@ class _DetailPageState extends State<DetailPage> {
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Row(
-
-
                       //TODO change the following container to elevated buttons
                       children: [
-                        SizedBox(width: 12,),
+                        SizedBox(width: 12),
 
                         ElevatedButton(
                           onPressed: () {
                             debugPrint('button');
                           },
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: const Color.fromARGB(255, 228, 226, 231),
+                            backgroundColor: const Color.fromARGB(255,228,226,231),
                             padding: const EdgeInsets.symmetric(
                               horizontal: 16,
                               vertical: 12,
                             ),
                             shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(
-                                12,
-                              ), 
+                              borderRadius: BorderRadius.circular(12),
                             ),
                           ),
                           child: const Text(
@@ -118,22 +120,20 @@ class _DetailPageState extends State<DetailPage> {
                           ),
                         ),
 
-                        SizedBox(width: 12,),
+                        SizedBox(width: 12),
 
                         ElevatedButton(
                           onPressed: () {
                             debugPrint('button');
                           },
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: const Color.fromARGB(255, 228, 226, 231),
+                            backgroundColor: const Color.fromARGB(255,228,226,231),
                             padding: const EdgeInsets.symmetric(
                               horizontal: 16,
                               vertical: 12,
                             ),
                             shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(
-                                12,
-                              ), 
+                              borderRadius: BorderRadius.circular(12),
                             ),
                           ),
                           child: const Text(
@@ -146,22 +146,47 @@ class _DetailPageState extends State<DetailPage> {
                           ),
                         ),
 
-                        SizedBox(width: 12,),
+                        SizedBox(width: 12),
 
                         ElevatedButton(
                           onPressed: () {
                             debugPrint('button');
                           },
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: const Color.fromARGB(255, 228, 226, 231),
+                            backgroundColor: const Color.fromARGB(255,63,81,243),
+
                             padding: const EdgeInsets.symmetric(
                               horizontal: 16,
                               vertical: 12,
                             ),
                             shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(
-                                12,
-                              ), 
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                          ),
+                          child: const Text(
+                            "42",
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.w500,
+                              color: Color.fromARGB(255, 255, 255, 255),
+                            ),
+                          ),
+                        ),
+
+                        SizedBox(width: 12),
+
+                        ElevatedButton(
+                          onPressed: () {
+                            debugPrint('button');
+                          },
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: const Color.fromARGB(255,228,226,231),
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 16,
+                              vertical: 12,
+                            ),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12),
                             ),
                           ),
                           child: const Text(
@@ -174,22 +199,20 @@ class _DetailPageState extends State<DetailPage> {
                           ),
                         ),
 
-                        SizedBox(width: 12,),
+                        SizedBox(width: 12),
 
                         ElevatedButton(
                           onPressed: () {
                             debugPrint('button');
                           },
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: const Color.fromARGB(255, 228, 226, 231),
+                            backgroundColor: const Color.fromARGB(255,228,226,231),
                             padding: const EdgeInsets.symmetric(
                               horizontal: 16,
                               vertical: 12,
                             ),
                             shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(
-                                12,
-                              ), 
+                              borderRadius: BorderRadius.circular(12),
                             ),
                           ),
                           child: const Text(
@@ -202,22 +225,20 @@ class _DetailPageState extends State<DetailPage> {
                           ),
                         ),
 
-                        SizedBox(width: 12,),
+                        SizedBox(width: 12),
 
                         ElevatedButton(
                           onPressed: () {
                             debugPrint('button');
                           },
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: const Color.fromARGB(255, 228, 226, 231),
+                            backgroundColor: const Color.fromARGB(255,228,226,231),
                             padding: const EdgeInsets.symmetric(
                               horizontal: 16,
                               vertical: 12,
                             ),
                             shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(
-                                12,
-                              ), 
+                              borderRadius: BorderRadius.circular(12),
                             ),
                           ),
                           child: const Text(
@@ -230,35 +251,7 @@ class _DetailPageState extends State<DetailPage> {
                           ),
                         ),
 
-                        SizedBox(width: 12,),
-
-                        ElevatedButton(
-                          onPressed: () {
-                            debugPrint('button');
-                          },
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: const Color.fromARGB(255, 228, 226, 231),
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 16,
-                              vertical: 12,
-                            ),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(
-                                12,
-                              ), 
-                            ),
-                          ),
-                          child: const Text(
-                            "42",
-                            style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.w500,
-                              color: Colors.black,
-                            ),
-                          ),
-                        ),
-
-                        SizedBox(width: 12,),
+                        SizedBox(width: 12),
                       ],
                     ),
                   ),
@@ -300,12 +293,7 @@ class _DetailPageState extends State<DetailPage> {
                     ElevatedButton(
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color.fromARGB(
-                          255,
-                          10,
-                          6,
-                          231,
-                        ),
+                        backgroundColor: const Color.fromARGB(255, 63, 81, 243),
                         foregroundColor: Colors.white,
                         padding: EdgeInsets.symmetric(
                           horizontal: 40,

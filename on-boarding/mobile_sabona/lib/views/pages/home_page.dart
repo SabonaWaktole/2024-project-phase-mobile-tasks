@@ -12,7 +12,6 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   String user = "Yohannes";
 
-
   @override
   Widget build(BuildContext context) {
     DateTime now = DateTime.now();
@@ -45,463 +44,511 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
         ),
-        actions: [Icon(Icons.notifications)],
+        actions: [
+          Container(
+            padding: EdgeInsets.all(8),
+            decoration: BoxDecoration(
+              border: Border.all(width: 1),
+              borderRadius: BorderRadius.circular(8),
+            ),
+            child: Icon(Icons.notifications_none, size: 20),
+          ),
+          SizedBox(width: 10,),
+        ],
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            SizedBox(height: 20,),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 15.0),
+      body: Expanded(
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              SizedBox(height: 20),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 15.0),
 
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    "Available Products",
-                    style: TextStyle(fontSize: 30, fontWeight: FontWeight.w600),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Available Products",
+                      style: TextStyle(
+                        fontSize: 30,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    Container(
+                      padding: EdgeInsets.all(8),
+                      decoration: BoxDecoration(
+                        border: Border.all(width: 1),
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      child: Icon(Icons.search, size: 20),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(height: 20),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(16.0, 10.0, 10.0, 8.0),
+                child: Material(
+                  elevation: 4,
+                  borderRadius: BorderRadius.circular(16),
+                  color: Colors.transparent,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: const Color.fromARGB(255, 255, 255, 255),
+                      borderRadius: BorderRadius.circular(16),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        ClipRRect(
+                          borderRadius: const BorderRadius.only(
+                            topLeft: Radius.circular(16),
+                            topRight: Radius.circular(16),
+                          ),
+                          child: SizedBox(
+                            height: 200,
+                            width: 300,
+                            child: Image.asset(
+                              'assets/images/image.png',
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        ),
+                        const Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 15.0),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    "Leather shoes",
+                                    style: TextStyle(
+                                      fontSize: 25,
+                                      fontWeight: FontWeight.w600,
+                                    ),
+                                  ),
+                                  Text("Men's shoe"),
+                                ],
+                              ),
+                              Column(
+                                children: [
+                                  Text("\$120"),
+                                  Row(
+                                    children: [
+                                      Icon(Icons.star, color: Colors.amber),
+                                      Text("(4.0)"),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
-                  Icon(Icons.search, size: 40,),
-                ],
-              ),
-            ),
-            SizedBox(height: 20,),
-            Padding(
-              padding: EdgeInsetsGeometry.fromLTRB(16.0, 10.0, 10.0, 8.0),
-
-              //TODO retrive this child from widgetbuilder
-              child: Container(
-                decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 227, 227, 228),
-                  borderRadius: BorderRadius.circular(16),
                 ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    ClipRRect(
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(16),
-                        topRight: Radius.circular(16),
-                      ),
-                      child: SizedBox(
-                        height: 200,
-                        width: 300,
-                        child: Image.asset(
-                          'assets/images/image.png',
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 15.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                "Leather shoes",
-                                style: TextStyle(
-                                  fontSize: 25,
-                                  fontWeight: FontWeight.w600,
-                                ),
-                              ),
-                              Text("Men's shoe", style: GoogleFonts.abel()),
-                            ],
-                          ),
+              ),
 
-                          Column(
+              Padding(
+                padding: const EdgeInsets.fromLTRB(16.0, 10.0, 10.0, 8.0),
+                child: Material(
+                  elevation: 4,
+                  borderRadius: BorderRadius.circular(16),
+                  color: Colors.transparent,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: const Color.fromARGB(255, 255, 255, 255),
+                      borderRadius: BorderRadius.circular(16),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        ClipRRect(
+                          borderRadius: const BorderRadius.only(
+                            topLeft: Radius.circular(16),
+                            topRight: Radius.circular(16),
+                          ),
+                          child: SizedBox(
+                            height: 200,
+                            width: 300,
+                            child: Image.asset(
+                              'assets/images/image.png',
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        ),
+                        const Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 15.0),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text("\$120"),
-                              Row(
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Icon(Icons.star, color: Colors.amber),
-                                  Text("(4.0)", style: GoogleFonts.abel()),
+                                  Text(
+                                    "Leather shoes",
+                                    style: TextStyle(
+                                      fontSize: 25,
+                                      fontWeight: FontWeight.w600,
+                                    ),
+                                  ),
+                                  Text("Men's shoe"),
+                                ],
+                              ),
+                              Column(
+                                children: [
+                                  Text("\$120"),
+                                  Row(
+                                    children: [
+                                      Icon(Icons.star, color: Colors.amber),
+                                      Text("(4.0)"),
+                                    ],
+                                  ),
                                 ],
                               ),
                             ],
                           ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
-                  ],
+                  ),
                 ),
               ),
-            ),
-            Padding(
-              padding: EdgeInsetsGeometry.fromLTRB(16.0, 10.0, 10.0, 8.0),
 
-              child: Container(
-                decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 227, 227, 228),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(16.0, 10.0, 10.0, 8.0),
+                child: Material(
+                  elevation: 4,
                   borderRadius: BorderRadius.circular(16),
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    ClipRRect(
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(16),
-                        topRight: Radius.circular(16),
-                      ),
-                      child: SizedBox(
-                        height: 200,
-                        width: 300,
-                        child: Image.asset(
-                          'assets/images/image.png',
-                          fit: BoxFit.cover,
-                        ),
-                      ),
+                  color: Colors.transparent,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: const Color.fromARGB(255, 255, 255, 255),
+                      borderRadius: BorderRadius.circular(16),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 15.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                "Leather shoes",
-                                style: TextStyle(
-                                  fontSize: 25,
-                                  fontWeight: FontWeight.w600,
-                                ),
-                              ),
-                              Text("Men's shoe", style: GoogleFonts.abel()),
-                            ],
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        ClipRRect(
+                          borderRadius: const BorderRadius.only(
+                            topLeft: Radius.circular(16),
+                            topRight: Radius.circular(16),
                           ),
-
-                          Column(
+                          child: SizedBox(
+                            height: 200,
+                            width: 300,
+                            child: Image.asset(
+                              'assets/images/image.png',
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        ),
+                        const Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 15.0),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text("\$120"),
-                              Row(
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Icon(Icons.star, color: Colors.amber),
-                                  Text("(4.0)", style: GoogleFonts.abel()),
+                                  Text(
+                                    "Leather shoes",
+                                    style: TextStyle(
+                                      fontSize: 25,
+                                      fontWeight: FontWeight.w600,
+                                    ),
+                                  ),
+                                  Text("Men's shoe"),
+                                ],
+                              ),
+                              Column(
+                                children: [
+                                  Text("\$120"),
+                                  Row(
+                                    children: [
+                                      Icon(Icons.star, color: Colors.amber),
+                                      Text("(4.0)"),
+                                    ],
+                                  ),
                                 ],
                               ),
                             ],
                           ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
-                  ],
+                  ),
                 ),
               ),
-            ),
-            Padding(
-              padding: EdgeInsetsGeometry.fromLTRB(16.0, 10.0, 10.0, 8.0),
 
-              child: Container(
-                decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 227, 227, 228),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(16.0, 10.0, 10.0, 8.0),
+                child: Material(
+                  elevation: 4,
                   borderRadius: BorderRadius.circular(16),
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    ClipRRect(
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(16),
-                        topRight: Radius.circular(16),
-                      ),
-                      child: SizedBox(
-                        height: 200,
-                        width: 300,
-                        child: Image.asset(
-                          'assets/images/image.png',
-                          fit: BoxFit.cover,
-                        ),
-                      ),
+                  color: Colors.transparent,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: const Color.fromARGB(255, 255, 255, 255),
+                      borderRadius: BorderRadius.circular(16),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 15.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                "Leather shoes",
-                                style: TextStyle(
-                                  fontSize: 25,
-                                  fontWeight: FontWeight.w600,
-                                ),
-                              ),
-                              Text("Men's shoe", style: GoogleFonts.abel()),
-                            ],
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        ClipRRect(
+                          borderRadius: const BorderRadius.only(
+                            topLeft: Radius.circular(16),
+                            topRight: Radius.circular(16),
                           ),
-
-                          Column(
+                          child: SizedBox(
+                            height: 200,
+                            width: 300,
+                            child: Image.asset(
+                              'assets/images/image.png',
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        ),
+                        const Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 15.0),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text("\$120"),
-                              Row(
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Icon(Icons.star, color: Colors.amber),
-                                  Text("(4.0)", style: GoogleFonts.abel()),
+                                  Text(
+                                    "Leather shoes",
+                                    style: TextStyle(
+                                      fontSize: 25,
+                                      fontWeight: FontWeight.w600,
+                                    ),
+                                  ),
+                                  Text("Men's shoe"),
+                                ],
+                              ),
+                              Column(
+                                children: [
+                                  Text("\$120"),
+                                  Row(
+                                    children: [
+                                      Icon(Icons.star, color: Colors.amber),
+                                      Text("(4.0)"),
+                                    ],
+                                  ),
                                 ],
                               ),
                             ],
                           ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
-                  ],
+                  ),
                 ),
               ),
-            ),
-            Padding(
-              padding: EdgeInsetsGeometry.fromLTRB(16.0, 10.0, 10.0, 8.0),
 
-              child: Container(
-                decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 227, 227, 228),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(16.0, 10.0, 10.0, 8.0),
+                child: Material(
+                  elevation: 4,
                   borderRadius: BorderRadius.circular(16),
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    ClipRRect(
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(16),
-                        topRight: Radius.circular(16),
-                      ),
-                      child: SizedBox(
-                        height: 200,
-                        width: 300,
-                        child: Image.asset(
-                          'assets/images/image.png',
-                          fit: BoxFit.cover,
-                        ),
-                      ),
+                  color: Colors.transparent,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: const Color.fromARGB(255, 255, 255, 255),
+                      borderRadius: BorderRadius.circular(16),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 15.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                "Leather shoes",
-                                style: TextStyle(
-                                  fontSize: 25,
-                                  fontWeight: FontWeight.w600,
-                                ),
-                              ),
-                              Text("Men's shoe", style: GoogleFonts.abel()),
-                            ],
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        ClipRRect(
+                          borderRadius: const BorderRadius.only(
+                            topLeft: Radius.circular(16),
+                            topRight: Radius.circular(16),
                           ),
-
-                          Column(
+                          child: SizedBox(
+                            height: 200,
+                            width: 300,
+                            child: Image.asset(
+                              'assets/images/image.png',
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        ),
+                        const Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 15.0),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text("\$120"),
-                              Row(
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Icon(Icons.star, color: Colors.amber),
-                                  Text("(4.0)", style: GoogleFonts.abel()),
+                                  Text(
+                                    "Leather shoes",
+                                    style: TextStyle(
+                                      fontSize: 25,
+                                      fontWeight: FontWeight.w600,
+                                    ),
+                                  ),
+                                  Text("Men's shoe"),
+                                ],
+                              ),
+                              Column(
+                                children: [
+                                  Text("\$120"),
+                                  Row(
+                                    children: [
+                                      Icon(Icons.star, color: Colors.amber),
+                                      Text("(4.0)"),
+                                    ],
+                                  ),
                                 ],
                               ),
                             ],
                           ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
-                  ],
+                  ),
                 ),
               ),
-            ),
-            Padding(
-              padding: EdgeInsetsGeometry.fromLTRB(16.0, 10.0, 10.0, 8.0),
 
-              child: Container(
-                decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 227, 227, 228),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(16.0, 10.0, 10.0, 8.0),
+                child: Material(
+                  elevation: 4,
                   borderRadius: BorderRadius.circular(16),
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    ClipRRect(
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(16),
-                        topRight: Radius.circular(16),
-                      ),
-                      child: SizedBox(
-                        height: 200,
-                        width: 300,
-                        child: Image.asset(
-                          'assets/images/image.png',
-                          fit: BoxFit.cover,
-                        ),
-                      ),
+                  color: Colors.transparent,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: const Color.fromARGB(255, 255, 255, 255),
+                      borderRadius: BorderRadius.circular(16),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 15.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                "Leather shoes",
-                                style: TextStyle(
-                                  fontSize: 25,
-                                  fontWeight: FontWeight.w600,
-                                ),
-                              ),
-                              Text("Men's shoe", style: GoogleFonts.abel()),
-                            ],
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        ClipRRect(
+                          borderRadius: const BorderRadius.only(
+                            topLeft: Radius.circular(16),
+                            topRight: Radius.circular(16),
                           ),
-
-                          Column(
+                          child: SizedBox(
+                            height: 200,
+                            width: 300,
+                            child: Image.asset(
+                              'assets/images/image.png',
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        ),
+                        const Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 15.0),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text("\$120"),
-                              Row(
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Icon(Icons.star, color: Colors.amber),
-                                  Text("(4.0)", style: GoogleFonts.abel()),
+                                  Text(
+                                    "Leather shoes",
+                                    style: TextStyle(
+                                      fontSize: 25,
+                                      fontWeight: FontWeight.w600,
+                                    ),
+                                  ),
+                                  Text("Men's shoe"),
+                                ],
+                              ),
+                              Column(
+                                children: [
+                                  Text("\$120"),
+                                  Row(
+                                    children: [
+                                      Icon(Icons.star, color: Colors.amber),
+                                      Text("(4.0)"),
+                                    ],
+                                  ),
                                 ],
                               ),
                             ],
                           ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
-                  ],
+                  ),
                 ),
               ),
-            ),
-            Padding(
-              padding: EdgeInsetsGeometry.fromLTRB(16.0, 10.0, 10.0, 8.0),
 
-              child: Container(
-                decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 227, 227, 228),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(16.0, 10.0, 10.0, 8.0),
+                child: Material(
+                  elevation: 4,
                   borderRadius: BorderRadius.circular(16),
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    ClipRRect(
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(16),
-                        topRight: Radius.circular(16),
-                      ),
-                      child: SizedBox(
-                        height: 200,
-                        width: 300,
-                        child: Image.asset(
-                          'assets/images/image.png',
-                          fit: BoxFit.cover,
-                        ),
-                      ),
+                  color: Colors.transparent,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: const Color.fromARGB(255, 255, 255, 255),
+                      borderRadius: BorderRadius.circular(16),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 15.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                "Leather shoes",
-                                style: TextStyle(
-                                  fontSize: 25,
-                                  fontWeight: FontWeight.w600,
-                                ),
-                              ),
-                              Text("Men's shoe", style: GoogleFonts.abel()),
-                            ],
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        ClipRRect(
+                          borderRadius: const BorderRadius.only(
+                            topLeft: Radius.circular(16),
+                            topRight: Radius.circular(16),
                           ),
-
-                          Column(
+                          child: SizedBox(
+                            height: 200,
+                            width: 300,
+                            child: Image.asset(
+                              'assets/images/image.png',
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        ),
+                        const Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 15.0),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text("\$120"),
-                              Row(
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Icon(Icons.star, color: Colors.amber),
-                                  Text("(4.0)", style: GoogleFonts.abel()),
+                                  Text(
+                                    "Leather shoes",
+                                    style: TextStyle(
+                                      fontSize: 25,
+                                      fontWeight: FontWeight.w600,
+                                    ),
+                                  ),
+                                  Text("Men's shoe"),
+                                ],
+                              ),
+                              Column(
+                                children: [
+                                  Text("\$120"),
+                                  Row(
+                                    children: [
+                                      Icon(Icons.star, color: Colors.amber),
+                                      Text("(4.0)"),
+                                    ],
+                                  ),
                                 ],
                               ),
                             ],
                           ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            Padding(
-              padding: EdgeInsetsGeometry.fromLTRB(16.0, 10.0, 10.0, 8.0),
-
-              child: Container(
-                decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 227, 227, 228),
-                  borderRadius: BorderRadius.circular(16),
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    ClipRRect(
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(16),
-                        topRight: Radius.circular(16),
-                      ),
-                      child: SizedBox(
-                        height: 200,
-                        width: 300,
-                        child: Image.asset(
-                          'assets/images/image.png',
-                          fit: BoxFit.cover,
                         ),
-                      ),
+                      ],
                     ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 15.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                "Leather shoes",
-                                style: TextStyle(
-                                  fontSize: 25,
-                                  fontWeight: FontWeight.w600,
-                                ),
-                              ),
-                              Text("Men's shoe", style: GoogleFonts.abel()),
-                            ],
-                          ),
-
-                          Column(
-                            children: [
-                              Text("\$120"),
-                              Row(
-                                children: [
-                                  Icon(Icons.star, color: Colors.amber),
-                                  Text("(4.0)", style: GoogleFonts.abel()),
-                                ],
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
       floatingActionButton: FloatingActionButton(
@@ -509,7 +556,7 @@ class _HomePageState extends State<HomePage> {
           debugPrint("statement");
         },
         tooltip: 'Increment',
-        backgroundColor: const Color.fromARGB(255, 86, 10, 226),
+        backgroundColor: const Color.fromARGB(255, 63, 81, 243),
         foregroundColor: Colors.white,
         elevation: 20.0,
         shape: RoundedRectangleBorder(
