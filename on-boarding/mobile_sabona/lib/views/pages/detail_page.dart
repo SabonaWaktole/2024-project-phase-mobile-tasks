@@ -36,16 +36,11 @@ class _DetailPageState extends State<DetailPage> {
                             color: Colors.white,
                           ),
                           child: Icon(
-                            Icons.arrow_back_ios,
+                            Icons.arrow_back_ios_new,
                             color: Color.fromARGB(255,63,81,243),
                           ),
                         ),
                       ),
-
-
-
-
-
                     ),
                   ],
                 ),
