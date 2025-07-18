@@ -89,6 +89,8 @@ class _DetailPageState extends State<DetailPage> {
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Row(
+
+                      //TODO change the following padding to elevated buttons
                       children: [
                         Container(
                           margin: EdgeInsets.symmetric(horizontal: 12),
