@@ -17,18 +17,15 @@ class _DetailPageState extends State<DetailPage> {
           width: double.infinity,
           child: Column(
             crossAxisAlignment:
-                CrossAxisAlignment.stretch, // Ensures children stretch in width
+                CrossAxisAlignment.stretch, 
             children: [
               SizedBox(
                 height: 300,
                 width: double.infinity,
                 child: Stack(
-                  fit: StackFit.expand, // Makes children fill the stack
+                  fit: StackFit.expand,
                   children: [
-                    Image.asset(
-                      "assets/images/image.png",
-                      fit: BoxFit.fill, // 👈 use cover to fill the width
-                    ),
+                    Image.asset("assets/images/image.png", fit: BoxFit.fill),
                     Align(
                       alignment: Alignment.topLeft,
                       child: Padding(
@@ -37,7 +34,7 @@ class _DetailPageState extends State<DetailPage> {
                           40,
                           10,
                           5,
-                        ), // Optional padding for the icon
+                        ), 
                         child: Icon(
                           Icons.arrow_back_ios,
                           color: Color.fromARGB(255, 42, 4, 131),
@@ -90,136 +87,178 @@ class _DetailPageState extends State<DetailPage> {
                     scrollDirection: Axis.horizontal,
                     child: Row(
 
-                      //TODO change the following padding to elevated buttons
+
+                      //TODO change the following container to elevated buttons
                       children: [
-                        Container(
-                          margin: EdgeInsets.symmetric(horizontal: 12),
-                          padding: EdgeInsets.symmetric(
-                            horizontal: 16,
-                            vertical: 12,
-                          ),
-                          decoration: BoxDecoration(
-                            color: const Color.fromARGB(255, 197, 192, 207),
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                          child: Text(
-                            "42",
-                            style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.w500,
+                        SizedBox(width: 12,),
+
+                        ElevatedButton(
+                          onPressed: () {
+                            debugPrint('button');
+                          },
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: const Color.fromARGB(255, 228, 226, 231),
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 16,
+                              vertical: 12,
+                            ),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(
+                                12,
+                              ), 
                             ),
                           ),
-                        ),
-                        Container(
-                          margin: EdgeInsets.symmetric(horizontal: 12),
-                          padding: EdgeInsets.symmetric(
-                            horizontal: 16,
-                            vertical: 12,
-                          ),
-                          decoration: BoxDecoration(
-                            color: const Color.fromARGB(255, 197, 192, 207),
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                          child: Text(
+                          child: const Text(
                             "42",
                             style: TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.w500,
-                            ),
-                          ),
-                        ),
-                        Container(
-                          margin: EdgeInsets.symmetric(horizontal: 12),
-                          padding: EdgeInsets.symmetric(
-                            horizontal: 16,
-                            vertical: 12,
-                          ),
-                          decoration: BoxDecoration(
-                            color: const Color.fromARGB(255, 21, 35, 243),
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                          child: Text(
-                            "42",
-                            style: TextStyle(
-                              fontSize: 18,
-                              color: Colors.white,
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ),
-                        ),
-                        Container(
-                          margin: EdgeInsets.symmetric(horizontal: 12),
-                          padding: EdgeInsets.symmetric(
-                            horizontal: 16,
-                            vertical: 12,
-                          ),
-                          decoration: BoxDecoration(
-                            color: const Color.fromARGB(255, 197, 192, 207),
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                          child: Text(
-                            "42",
-                            style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ),
-                        ),
-                        Container(
-                          margin: EdgeInsets.symmetric(horizontal: 12),
-                          padding: EdgeInsets.symmetric(
-                            horizontal: 16,
-                            vertical: 12,
-                          ),
-                          decoration: BoxDecoration(
-                            color: const Color.fromARGB(255, 197, 192, 207),
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                          child: Text(
-                            "42",
-                            style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.w500,
+                              color: Colors.black,
                             ),
                           ),
                         ),
 
-                        Container(
-                          margin: EdgeInsets.symmetric(horizontal: 12),
-                          padding: EdgeInsets.symmetric(
-                            horizontal: 16,
-                            vertical: 12,
+                        SizedBox(width: 12,),
+
+                        ElevatedButton(
+                          onPressed: () {
+                            debugPrint('button');
+                          },
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: const Color.fromARGB(255, 228, 226, 231),
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 16,
+                              vertical: 12,
+                            ),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(
+                                12,
+                              ), 
+                            ),
                           ),
-                          decoration: BoxDecoration(
-                            color: const Color.fromARGB(255, 197, 192, 207),
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                          child: Text(
+                          child: const Text(
                             "42",
                             style: TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.w500,
+                              color: Colors.black,
                             ),
                           ),
                         ),
-                        Container(
-                          margin: EdgeInsets.symmetric(horizontal: 12),
-                          padding: EdgeInsets.symmetric(
-                            horizontal: 16,
-                            vertical: 12,
+
+                        SizedBox(width: 12,),
+
+                        ElevatedButton(
+                          onPressed: () {
+                            debugPrint('button');
+                          },
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: const Color.fromARGB(255, 228, 226, 231),
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 16,
+                              vertical: 12,
+                            ),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(
+                                12,
+                              ), 
+                            ),
                           ),
-                          decoration: BoxDecoration(
-                            color: const Color.fromARGB(255, 197, 192, 207),
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                          child: Text(
+                          child: const Text(
                             "42",
                             style: TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.w500,
+                              color: Colors.black,
                             ),
                           ),
                         ),
+
+                        SizedBox(width: 12,),
+
+                        ElevatedButton(
+                          onPressed: () {
+                            debugPrint('button');
+                          },
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: const Color.fromARGB(255, 228, 226, 231),
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 16,
+                              vertical: 12,
+                            ),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(
+                                12,
+                              ), 
+                            ),
+                          ),
+                          child: const Text(
+                            "42",
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.w500,
+                              color: Colors.black,
+                            ),
+                          ),
+                        ),
+
+                        SizedBox(width: 12,),
+
+                        ElevatedButton(
+                          onPressed: () {
+                            debugPrint('button');
+                          },
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: const Color.fromARGB(255, 228, 226, 231),
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 16,
+                              vertical: 12,
+                            ),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(
+                                12,
+                              ), 
+                            ),
+                          ),
+                          child: const Text(
+                            "42",
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.w500,
+                              color: Colors.black,
+                            ),
+                          ),
+                        ),
+
+                        SizedBox(width: 12,),
+
+                        ElevatedButton(
+                          onPressed: () {
+                            debugPrint('button');
+                          },
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: const Color.fromARGB(255, 228, 226, 231),
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 16,
+                              vertical: 12,
+                            ),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(
+                                12,
+                              ), 
+                            ),
+                          ),
+                          child: const Text(
+                            "42",
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.w500,
+                              color: Colors.black,
+                            ),
+                          ),
+                        ),
+
+                        SizedBox(width: 12,),
                       ],
                     ),
                   ),
@@ -242,16 +281,11 @@ class _DetailPageState extends State<DetailPage> {
                     TextButton(
                       onPressed: () {},
                       style: TextButton.styleFrom(
-                        side: BorderSide(
-                          color: Colors.red,
-                          width: 1.5,
-                        ), 
+                        side: BorderSide(color: Colors.red, width: 1.5),
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(
-                            8,
-                          ), 
+                          borderRadius: BorderRadius.circular(8),
                         ),
-                        foregroundColor: Colors.red, // text/icon color
+                        foregroundColor: Colors.red,
                         padding: EdgeInsets.symmetric(
                           horizontal: 40,
                           vertical: 10,
@@ -271,8 +305,8 @@ class _DetailPageState extends State<DetailPage> {
                           10,
                           6,
                           231,
-                        ), // button color
-                        foregroundColor: Colors.white, // text/icon color
+                        ),
+                        foregroundColor: Colors.white,
                         padding: EdgeInsets.symmetric(
                           horizontal: 40,
                           vertical: 12,

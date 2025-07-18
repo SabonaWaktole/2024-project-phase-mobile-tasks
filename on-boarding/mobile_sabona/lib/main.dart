@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:mobile_sabona/views/pages/home_page.dart';
 import 'package:mobile_sabona/views/pages/add_update_page.dart';
 import 'package:mobile_sabona/views/pages/detail_page.dart';
+import 'package:mobile_sabona/views/pages/add_update_page.dart';
+import 'package:mobile_sabona/views/pages/search_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -42,6 +44,6 @@ class _MyHomePageState extends State<MyHomePage> {
   
   @override
   Widget build(BuildContext context) {
-    return DetailPage();
+    return HomePage();
   }
 }
