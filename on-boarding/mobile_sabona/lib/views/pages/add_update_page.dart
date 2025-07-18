@@ -39,7 +39,7 @@ class _AddUpdatePageState extends State<AddUpdatePage> {
                         height: 150,
                         width: double.infinity,
                         decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 240, 240, 240),
+                          color: Color.fromARGB(255,243,243,243),
                           borderRadius: BorderRadius.circular(8),
                         ),
                         child: Column(
@@ -122,7 +122,7 @@ class _AddUpdatePageState extends State<AddUpdatePage> {
                   ElevatedButton(
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color.fromARGB(255, 10, 6, 231),
+                      backgroundColor: const Color.fromARGB(255,63,81,243),
                       foregroundColor: Colors.white,
                       padding: EdgeInsets.symmetric(
                         horizontal: 165,
