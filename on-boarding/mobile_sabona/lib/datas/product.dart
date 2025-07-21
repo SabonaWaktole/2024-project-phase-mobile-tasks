@@ -9,6 +9,7 @@ class Product {
     final String imagePath;
     final String category;
     final double rating;
+    final int id;
 
 
     
@@ -20,6 +21,6 @@ Product({
     required this.imagePath,
     required this.description,
     required this.rating,
-
+    required this.id,
 });
 }
