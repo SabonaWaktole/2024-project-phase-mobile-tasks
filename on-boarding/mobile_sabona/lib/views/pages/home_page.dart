@@ -135,28 +135,18 @@ class _HomePageState extends State<HomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.of(context).push(
-            PageRouteBuilder(
-              transitionDuration: const Duration(milliseconds: 700),
-              pageBuilder: (_, animation, __) => const AddUpdatePage(),
-              transitionsBuilder: (_, animation, __, child) {
-                final curved = CurvedAnimation(
-                  parent: animation,
-                  curve: Curves.easeInOutBack, // nice bounce
-                );
-                return ScaleTransition(
-                  scale: curved,
-                  child: FadeTransition(opacity: animation, child: child),
-                );
-              },
-            ),
-          );
+          Navigator.of(
+            context,
+          ).push(MaterialPageRoute(builder: (context) => AddUpdatePage()));
         },
-        tooltip: 'Add Something Cool',
+        tooltip: 'Increment',
         backgroundColor: const Color.fromARGB(255, 63, 81, 243),
         foregroundColor: Colors.white,
         elevation: 30.0,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadiusGeometry.circular(30),
+        ),
         child: const Icon(Icons.add, size: 50),
       ),
     );
