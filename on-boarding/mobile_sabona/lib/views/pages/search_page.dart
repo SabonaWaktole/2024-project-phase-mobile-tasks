@@ -18,9 +18,14 @@ class _SearchPageState extends State<SearchPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(
-          Icons.arrow_back_ios_new,
-          color: const Color.fromARGB(255, 16, 30, 224),
+        leading: TextButton(
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+          child: Icon(
+            Icons.arrow_back_ios_new,
+            color: const Color.fromARGB(255, 16, 30, 224),
+          ),
         ),
         title: Padding(
           padding: const EdgeInsets.fromLTRB(80, 10, 10, 10),

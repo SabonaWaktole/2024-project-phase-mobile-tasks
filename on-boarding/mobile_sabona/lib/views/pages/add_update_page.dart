@@ -13,9 +13,23 @@ class _AddUpdatePageState extends State<AddUpdatePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(
-          Icons.arrow_back_ios_new,
-          color: const Color.fromARGB(255, 16, 30, 224),
+        leading: ElevatedButton(
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+
+          style: ElevatedButton.styleFrom(
+            shape: const CircleBorder(),
+            padding: EdgeInsets.only(left: 10),
+            backgroundColor: Colors.white,
+            elevation: 0,
+          ),
+
+          child: Icon(
+            Icons.arrow_back_ios_new,
+            color: const Color.fromARGB(255, 16, 30, 224),
+            size: 30,
+          ),
         ),
         title: Padding(
           padding: const EdgeInsets.fromLTRB(80, 10, 10, 10),
@@ -39,7 +53,7 @@ class _AddUpdatePageState extends State<AddUpdatePage> {
                         height: 150,
                         width: double.infinity,
                         decoration: BoxDecoration(
-                          color: Color.fromARGB(255,243,243,243),
+                          color: Color.fromARGB(255, 243, 243, 243),
                           borderRadius: BorderRadius.circular(8),
                         ),
                         child: Column(
@@ -122,7 +136,7 @@ class _AddUpdatePageState extends State<AddUpdatePage> {
                   ElevatedButton(
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color.fromARGB(255,63,81,243),
+                      backgroundColor: const Color.fromARGB(255, 63, 81, 243),
                       foregroundColor: Colors.white,
                       padding: EdgeInsets.symmetric(
                         horizontal: 165,
