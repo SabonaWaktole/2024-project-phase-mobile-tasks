@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:mobile_sabona/datas/product.dart';
+import 'package:mobile_sabona/datas/product_repository.dart';
+import 'package:mobile_sabona/views/widgets/product_card.dart';
 
 class SearchPage extends StatefulWidget {
   const SearchPage({super.key});
@@ -9,6 +11,9 @@ class SearchPage extends StatefulWidget {
 }
 
 class _SearchPageState extends State<SearchPage> {
+
+  List<Product> products = ProductRepository.getProductByName("shoe");
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -68,144 +73,13 @@ class _SearchPageState extends State<SearchPage> {
           SizedBox(height: 20,),
           Expanded(
             child: SingleChildScrollView(
-              child: Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(16.0, 10.0, 10.0, 8.0),
-                    child: Material(
-                      elevation: 4,
-                      borderRadius: BorderRadius.circular(16),
-                      color: Colors.transparent,
-                      child: Container(
-                        decoration: BoxDecoration(
-                          color: const Color.fromARGB(255, 255, 255, 255),
-                          borderRadius: BorderRadius.circular(16),
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.stretch,
-                          children: [
-                            ClipRRect(
-                              borderRadius: const BorderRadius.only(
-                                topLeft: Radius.circular(16),
-                                topRight: Radius.circular(16),
-                              ),
-                              child: SizedBox(
-                                height: 200,
-                                width: 300,
-                                child: Image.asset(
-                                  'assets/images/image.png',
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                            ),
-                            const Padding(
-                              padding: EdgeInsets.symmetric(horizontal: 15.0),
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        "Leather shoes",
-                                        style: TextStyle(
-                                          fontSize: 25,
-                                          fontWeight: FontWeight.w600,
-                                        ),
-                                      ),
-                                      Text("Men's shoe"),
-                                    ],
-                                  ),
-                                  Column(
-                                    children: [
-                                      Text("\$120"),
-                                      Row(
-                                        children: [
-                                          Icon(Icons.star, color: Colors.amber),
-                                          Text("(4.0)"),
-                                        ],
-                                      ),
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(16.0, 10.0, 10.0, 8.0),
-                    child: Material(
-                      elevation: 4,
-                      borderRadius: BorderRadius.circular(16),
-                      color: Colors.transparent,
-                      child: Container(
-                        decoration: BoxDecoration(
-                          color: const Color.fromARGB(255, 255, 255, 255),
-                          borderRadius: BorderRadius.circular(16),
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.stretch,
-                          children: [
-                            ClipRRect(
-                              borderRadius: const BorderRadius.only(
-                                topLeft: Radius.circular(16),
-                                topRight: Radius.circular(16),
-                              ),
-                              child: SizedBox(
-                                height: 200,
-                                width: 300,
-                                child: Image.asset(
-                                  'assets/images/image.png',
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                            ),
-                            const Padding(
-                              padding: EdgeInsets.symmetric(horizontal: 15.0),
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        "Leather shoes",
-                                        style: TextStyle(
-                                          fontSize: 25,
-                                          fontWeight: FontWeight.w600,
-                                        ),
-                                      ),
-                                      Text("Men's shoe"),
-                                    ],
-                                  ),
-                                  Column(
-                                    children: [
-                                      Text("\$120"),
-                                      Row(
-                                        children: [
-                                          Icon(Icons.star, color: Colors.amber),
-                                          Text("(4.0)"),
-                                        ],
-                                      ),
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
+              child: ListView.builder(
+                itemCount: products.length,
+                shrinkWrap: true,
+                physics: NeverScrollableScrollPhysics(),
+                itemBuilder: (BuildContext context, int index) {
+                  return ProductCard(product: products[index]);
+                },
               ),
             ),
           ),
@@ -223,7 +97,6 @@ class _SearchPageState extends State<SearchPage> {
 
                       filled: true,
 
-                      // enabledBorder: OutlineInputBorder(),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(15),
                       ),
