@@ -17,4 +17,4 @@ samples, guidance on mobile development, and a full API reference.
 ![Screenshots](https://github.com/SabonaWaktole/2024-project-phase-mobile-tasks/blob/main/on-boarding/mobile_sabona/assets/screenshots/Screenshot%20from%202025-07-21%2007-28-19.png)
 ![screenshots](https://github.com/SabonaWaktole/2024-project-phase-mobile-tasks/blob/main/on-boarding/mobile_sabona/assets/screenshots/Screenshot%20from%202025-07-21%2007-28-40.png)
 ![Screenshots](https://github.com/SabonaWaktole/2024-project-phase-mobile-tasks/blob/main/on-boarding/mobile_sabona/assets/screenshots/Screenshot%20from%202025-07-21%2007-30-23.png)
-![Screenshot](https://github.com/SabonaWaktole/2024-project-phase-mobile-tasks/blob/main/on-boarding/mobile_sabona/assets/screenshots/Screenshot%20from%202025-07-21%2007-30-40.png)
+![Screenshots](https://github.com/SabonaWaktole/2024-project-phase-mobile-tasks/blob/main/on-boarding/mobile_sabona/assets/screenshots/Screenshot%20from%202025-07-21%2007-30-40.png)
