@@ -14,7 +14,7 @@ class ProductStorage {
 
 
     Product(
-      name: "White sketchers shoes",
+      name: "White sketchers shoes ",
       category: "men's shoes", 
       description: "Leather shoes are footwear made primarily from animal hide (leather), offering durability, breathability, and a classic aesthetic. They are a popular choice for both casual and formal wear due to their versatility and the unique properties of leather.Leather Shoes vs Man-made Leather Shoes | ShoeTree Project Here's a more detailed look: Key Characteristics of Leather Shoes:Material:Leather shoes are crafted from tanned animal hides, commonly cowhide, but also including exotic options like alligator, ostrich, and suede.Durability:High-quality leather is naturally resistant to wear and tear, and can become even more supple and attractive with age.Breathability:Leather's porous structure allows for air circulation, which helps to keep feet comfortable and reduces odor.Flexibility: conforms to the shape of the foot, providing superior comfort and a customized fit."
       , 
