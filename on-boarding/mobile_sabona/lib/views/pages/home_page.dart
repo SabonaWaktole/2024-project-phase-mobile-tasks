@@ -3,6 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import 'package:mobile_sabona/datas/product.dart';
 import 'package:mobile_sabona/datas/product_repository.dart';
+import 'package:mobile_sabona/views/pages/add_update_page.dart';
+import 'package:mobile_sabona/views/pages/search_page.dart';
 import 'package:mobile_sabona/views/widgets/product_card.dart';
 
 class HomePage extends StatefulWidget {
@@ -16,7 +18,7 @@ class _HomePageState extends State<HomePage> {
   String user = "Yohannes";
 
   List<Product> products = ProductRepository.getAllProduct();
-  
+
   @override
   Widget build(BuildContext context) {
     DateTime now = DateTime.now();
@@ -98,12 +100,21 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     Container(
-                      padding: EdgeInsets.all(8),
+                      padding: EdgeInsets.all(2),
                       decoration: BoxDecoration(
                         border: Border.all(width: 1),
-                        borderRadius: BorderRadius.circular(8),
+                        borderRadius: BorderRadius.circular(10),
                       ),
-                      child: Icon(Icons.search, size: 25),
+                      child: TextButton(
+                        onPressed: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => SearchPage(),
+                            ),
+                          );
+                        },
+                        child: Icon(Icons.search, size: 30),
+                      ),
                     ),
                   ],
                 ),
@@ -124,16 +135,28 @@ class _HomePageState extends State<HomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          debugPrint("statement");
+          Navigator.of(context).push(
+            PageRouteBuilder(
+              transitionDuration: const Duration(milliseconds: 700),
+              pageBuilder: (_, animation, __) => const AddUpdatePage(),
+              transitionsBuilder: (_, animation, __, child) {
+                final curved = CurvedAnimation(
+                  parent: animation,
+                  curve: Curves.easeInOutBack, // nice bounce
+                );
+                return ScaleTransition(
+                  scale: curved,
+                  child: FadeTransition(opacity: animation, child: child),
+                );
+              },
+            ),
+          );
         },
-        tooltip: 'Increment',
+        tooltip: 'Add Something Cool',
         backgroundColor: const Color.fromARGB(255, 63, 81, 243),
         foregroundColor: Colors.white,
         elevation: 30.0,
-
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadiusGeometry.circular(30),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
         child: const Icon(Icons.add, size: 50),
       ),
     );

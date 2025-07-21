@@ -24,14 +24,18 @@ class DetailCard extends StatelessWidget {
                   alignment: Alignment.topLeft,
                   child: Padding(
                     padding: EdgeInsets.fromLTRB(30, 40, 10, 5),
-                    child: Container(
-                      padding: EdgeInsets.all(5),
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Colors.white,
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        shape: CircleBorder(eccentricity: 0),
+                        iconSize: 40,
+                        // iconSize: 
                       ),
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                      },
                       child: Icon(
                         Icons.arrow_back_ios_new,
+                        size: 20,
                         color: Color.fromARGB(255, 63, 81, 243),
                       ),
                     ),
@@ -48,7 +52,7 @@ class DetailCard extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(product.category, style: GoogleFonts.abel(),),
+                    Text(product.category, style: GoogleFonts.abel()),
 
                     Text(
                       product.name,
@@ -82,7 +86,6 @@ class DetailCard extends StatelessWidget {
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
-                  //TODO change the following container to elevated buttons
                   children: [
                     SizedBox(width: 12),
 
@@ -275,10 +278,7 @@ class DetailCard extends StatelessWidget {
 
           Padding(
             padding: const EdgeInsets.all(30.0),
-            child: Text(
-              product.description,
-              style: GoogleFonts.roboto(),
-            ),
+            child: Text(product.description, style: GoogleFonts.roboto()),
           ),
         ],
       ),
