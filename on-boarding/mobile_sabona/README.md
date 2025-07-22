@@ -1,4 +1,4 @@
-```markdown
+
 # 🛒 Flutter E-Commerce App
 
 A modern, full-featured e-commerce mobile application built with **Flutter**. This app enables users to browse products, view details, add items to the cart, and place orders — all with a clean UI and smooth experience.
@@ -21,7 +21,7 @@ A modern, full-featured e-commerce mobile application built with **Flutter**. Th
 
 ## 📂 Project Structure
 
-```
+```markdown
 
 lib/
 ├── main.dart
@@ -39,6 +39,8 @@ lib/
 		├──animated_navigator.dart
 		├──detail_card.dart
 		└──product_caard.dart
+
+```
 
 ## 🛠️ Getting Started
 
