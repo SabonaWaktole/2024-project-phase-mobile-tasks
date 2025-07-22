@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 // import 'package:mobile_sabona/datas/product_repository.dart';
 import 'package:mobile_sabona/datas/product.dart';
+// import 'package:mobile_sabona/views/pages/add_update_page.dart';
 import 'package:mobile_sabona/views/pages/detail_page.dart';
+import 'package:mobile_sabona/views/widgets/animated_navigator.dart';
 
 class ProductCard extends StatelessWidget {
   final Product product;
@@ -13,14 +15,13 @@ class ProductCard extends StatelessWidget {
       padding: const EdgeInsets.fromLTRB(30.0, 10.0, 30.0, 8.0),
       child: GestureDetector(
         onTap: () {
-          Navigator.of(context).push(
-            MaterialPageRoute(
-              builder: (context) => DetailPage(
-                productId: product.id,
-              ),
-            ),
-          );
-        },
+  Navigator.of(context).push(
+    animatedPageRoute(
+      DetailPage(productId: product.id),
+    ),
+  );
+}
+,
         child: Material(
           elevation: 4,
           borderRadius: BorderRadius.circular(16),

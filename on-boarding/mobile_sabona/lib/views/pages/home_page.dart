@@ -5,6 +5,7 @@ import 'package:mobile_sabona/datas/product.dart';
 import 'package:mobile_sabona/datas/product_repository.dart';
 import 'package:mobile_sabona/views/pages/add_update_page.dart';
 import 'package:mobile_sabona/views/pages/search_page.dart';
+import 'package:mobile_sabona/views/widgets/animated_navigator.dart';
 import 'package:mobile_sabona/views/widgets/product_card.dart';
 
 class HomePage extends StatefulWidget {
@@ -107,11 +108,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                       child: TextButton(
                         onPressed: () {
-                          Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (context) => SearchPage(),
-                            ),
-                          );
+                          Navigator.of(context).push(animatedPageRoute(SearchPage()));
                         },
                         child: Icon(Icons.search, size: 30),
                       ),
@@ -134,21 +131,18 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.of(
-            context,
-          ).push(MaterialPageRoute(builder: (context) => AddUpdatePage()));
-        },
-        tooltip: 'Increment',
-        backgroundColor: const Color.fromARGB(255, 63, 81, 243),
-        foregroundColor: Colors.white,
-        elevation: 30.0,
-
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadiusGeometry.circular(30),
-        ),
-        child: const Icon(Icons.add, size: 50),
-      ),
+  onPressed: () {
+    Navigator.of(context).push(animatedPageRoute(AddUpdatePage()));
+  },
+  tooltip: 'Increment',
+  backgroundColor: const Color.fromARGB(255, 63, 81, 243),
+  foregroundColor: Colors.white,
+  elevation: 30.0,
+  shape: RoundedRectangleBorder(
+    borderRadius: BorderRadius.circular(30),
+  ),
+  child: const Icon(Icons.add, size: 50),
+),
     );
   }
 }

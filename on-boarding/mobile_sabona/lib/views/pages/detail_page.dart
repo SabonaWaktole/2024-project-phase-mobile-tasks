@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_sabona/views/pages/add_update_page.dart';
+import 'package:mobile_sabona/views/widgets/animated_navigator.dart';
 import 'package:mobile_sabona/views/widgets/detail_card.dart';
 import 'package:mobile_sabona/datas/product.dart';
 import 'package:mobile_sabona/datas/product_repository.dart';
@@ -49,9 +50,7 @@ class _DetailPageState extends State<DetailPage> {
             ),
             ElevatedButton(
               onPressed: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => AddUpdatePage()),
-                );
+                Navigator.of(context).push(animatedPageRoute(AddUpdatePage()));
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: const Color.fromARGB(255, 63, 81, 243),
