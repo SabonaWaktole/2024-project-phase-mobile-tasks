@@ -1,11 +1,11 @@
 
 # 🛒 Flutter E-Commerce App
 
-A modern, full-featured e-commerce mobile application built with **Flutter**. This app enables users to browse products, view details, add items to the cart, and place orders — all with a clean UI and smooth experience.
+A modern **Flutter e-commerce UI** built to demonstrate sleek navigation, responsive layouts, and smooth page transitions. This application allows users to browse through products and navigate between screens like product and detail, serving as a front-end foundation for a complete e-commerce solution.
+
+> Note: This project focuses on **UI/UX only**. Features like cart functionality, filtering, and real checkout are not yet implemented.
 
 ## 📱 Screenshots
-
-
 ![Screenshots](https://github.com/SabonaWaktole/2024-project-phase-mobile-tasks/blob/main/on-boarding/mobile_sabona/assets/screenshots/Screenshot%20from%202025-07-21%2007-28-19.png)
 ![screenshots](https://github.com/SabonaWaktole/2024-project-phase-mobile-tasks/blob/main/on-boarding/mobile_sabona/assets/screenshots/Screenshot%20from%202025-07-21%2007-28-40.png)
 ![Screenshots](https://github.com/SabonaWaktole/2024-project-phase-mobile-tasks/blob/main/on-boarding/mobile_sabona/assets/screenshots/Screenshot%20from%202025-07-21%2007-30-23.png)
