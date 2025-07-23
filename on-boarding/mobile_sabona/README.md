@@ -66,7 +66,7 @@ flutter run
 **Sabona Waktole**
 
 * GitHub: [@SabonaWaktole](https://github.com/SabonaWaktole)
-* Email: [saboa.waktole@a2sv.org](mailto:saboa.waktole@a2sv.org)
+* Email: [sabona.waktole@a2sv.org](mailto:sabona.waktole@a2sv.org)
 
 ---
 
