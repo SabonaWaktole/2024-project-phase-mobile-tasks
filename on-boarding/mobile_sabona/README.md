@@ -54,8 +54,8 @@ lib/
 ### Installation
 
 ```bash
-git clone https://github.com/SabonaWaktole/2024-project-phase-mobile-tasks/tree/main/on-boarding/mobile_sabona.git
-cd mobile_sabona
+git clone -b task7 https://github.com/SabonaWaktole/2024-project-phase-mobile-tasks.git
+cd 2024-project-phase-mobile-tasks/on-boarding/mobile_sabona
 flutter pub get
 flutter run
 ````
