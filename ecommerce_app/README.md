@@ -6,7 +6,7 @@ A modular, scalable, and testable eCommerce application built with **Flutter** u
 
 ## 📐 Architecture Overview
 
-This app follows the **Clean Architecture** structure, with separation of concerns into the following layers:
+This app follows the **Clean Architecture** structure, with separation of concerns into layers:
 
 
 ---
