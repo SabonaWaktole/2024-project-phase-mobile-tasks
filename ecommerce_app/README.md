@@ -1,16 +1,35 @@
-# ecommerce_app
+# 🛍️ Flutter eCommerce App (Clean Architecture)
 
-A new Flutter project.
+A modular, scalable, and testable eCommerce application built with **Flutter** using the **Clean Architecture** approach. This app demonstrates domain-driven design, use cases, repository abstraction, and complete test coverage.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 📐 Architecture Overview
 
-A few resources to get you started if this is your first Flutter project:
+This app follows the **Clean Architecture** structure, with separation of concerns into the following layers:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## 🧩 Features
+
+- View all products
+- View a single product by ID
+- Add a new product
+- Update an existing product
+- Delete a product
+- Domain-level use cases for each feature
+- In-memory data source (easy to replace with API or database)
+- Full unit and widget test coverage
+- Error handling with exception safety
+
+---
+
+## 📦 Technologies
+
+- **Flutter**
+- **Dart**
+- **Clean Architecture**
+- **Unit & Widget Testing**
+
+---
