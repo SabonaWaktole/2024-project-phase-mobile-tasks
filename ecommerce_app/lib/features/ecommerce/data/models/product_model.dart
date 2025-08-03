@@ -1,6 +1,5 @@
 import '../../domain/entities/product.dart';
 
-
 class ProductModel {
   final String id;
   final String name;
@@ -16,7 +15,6 @@ class ProductModel {
     required this.price,
   });
 
-  /// 🔁 Convert ProductModel -> Product Entity
   Product toEntity() {
     return Product(
       id: id,
@@ -27,7 +25,6 @@ class ProductModel {
     );
   }
 
-  /// 🔁 Convert Product Entity -> ProductModel
   factory ProductModel.fromEntity(Product product) {
     return ProductModel(
       id: product.id,
@@ -38,7 +35,6 @@ class ProductModel {
     );
   }
 
-  /// 🧪 Optional: For JSON serialization
   factory ProductModel.fromJson(Map<String, dynamic> json) {
     return ProductModel(
       id: json['id'],
@@ -57,5 +53,26 @@ class ProductModel {
       'imageUrl': imageUrl,
       'price': price,
     };
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+
+    return other is ProductModel &&
+        other.id == id &&
+        other.name == name &&
+        other.description == description &&
+        other.imageUrl == imageUrl &&
+        other.price == price;
+  }
+
+  @override
+  int get hashCode {
+    return id.hashCode ^
+        name.hashCode ^
+        description.hashCode ^
+        imageUrl.hashCode ^
+        price.hashCode;
   }
 }
