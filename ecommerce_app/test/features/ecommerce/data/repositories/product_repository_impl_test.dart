@@ -1,6 +1,6 @@
 import 'package:ecommerce_app/core/network/network_info.dart';
 import 'package:ecommerce_app/features/ecommerce/data/datasource/product_local_data_source.dart';
-import 'package:ecommerce_app/features/ecommerce/data/datasource/product_remote_data.dart';
+import 'package:ecommerce_app/features/ecommerce/data/datasource/product_remote_data_source.dart';
 import 'package:ecommerce_app/features/ecommerce/data/models/product_model.dart';
 import 'package:ecommerce_app/features/ecommerce/data/repositories/product_repository_impl.dart';
 import 'package:flutter_test/flutter_test.dart';

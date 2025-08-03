@@ -2,7 +2,7 @@ import '../../../../core/network/network_info.dart';
 import '../../domain/entities/product.dart';
 import '../../domain/repositories/product_repository.dart';
 import '../datasource/product_local_data_source.dart';
-import '../datasource/product_remote_data.dart';
+import '../datasource/product_remote_data_source.dart';
 import '../models/product_model.dart';
 
 class ProductRepositoryImpl implements ProductRepository {
