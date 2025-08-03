@@ -1,8 +1,7 @@
-// lib/features/ecommerce/data/datasource/product_remote_data_impl.dart
-
-import 'dart:convert';
 import 'package:http/http.dart' as http;
+
 import '../../../../core/error/exceptions.dart';
+import '../../../../core/utils/json_helper.dart';
 import '../models/product_model.dart';
 import 'product_remote_data_source.dart';
 
@@ -18,40 +17,37 @@ class ProductRemoteDatasourceImpl implements ProductRemoteDataSource {
     );
 
     if (response.statusCode == 200) {
-      final List decoded = json.decode(response.body);
-      return decoded.map((e) => ProductModel.fromJson(e)).toList();
+      return JsonHelper.decodeFromStringList<ProductModel>(
+        response.body,
+        (json) => ProductModel.fromJson(json),
+      );
     } else {
       throw ServerException();
     }
   }
-  
+
   @override
   Future<void> createProduct(ProductModel product) {
-    // TODO: implement createProduct
     throw UnimplementedError();
   }
-  
+
   @override
   Future<void> deleteProduct(String id) {
-    // TODO: implement deleteProduct
     throw UnimplementedError();
   }
-  
+
   @override
   Future<List<ProductModel>> fetchAllProducts() {
-    // TODO: implement fetchAllProducts
     throw UnimplementedError();
   }
-  
+
   @override
   Future<ProductModel> fetchProductById(String id) {
-    // TODO: implement fetchProductById
     throw UnimplementedError();
   }
-  
+
   @override
   Future<void> updateProduct(ProductModel product) {
-    // TODO: implement updateProduct
     throw UnimplementedError();
   }
 }

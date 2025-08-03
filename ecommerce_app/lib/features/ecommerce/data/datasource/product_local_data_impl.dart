@@ -1,7 +1,7 @@
-import 'dart:convert';
-
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../../../../core/error/exceptions.dart';
+import '../../../../core/utils/json_helper.dart';
 import '../models/product_model.dart';
 import 'product_local_data_source.dart';
 
@@ -14,9 +14,8 @@ class ProductLocalDataSourceImpl implements ProductLocalDataSource {
 
   @override
   Future<void> cacheProducts(List<ProductModel> products) {
-    final List<String> jsonProductList =
-        products.map((product) => json.encode(product.toJson())).toList();
-
+    final jsonProductList =
+        JsonHelper.encodeToStringList(products, (product) => product.toJson());
     return sharedPreferences.setStringList(cachedProductsKey, jsonProductList);
   }
 
@@ -25,21 +24,13 @@ class ProductLocalDataSourceImpl implements ProductLocalDataSource {
     final jsonProductList = sharedPreferences.getStringList(cachedProductsKey);
 
     if (jsonProductList != null && jsonProductList.isNotEmpty) {
-      final products = jsonProductList
-          .map((jsonProduct) => ProductModel.fromJson(json.decode(jsonProduct)))
-          .toList();
+      final products = JsonHelper.decodeFromStringList(
+        '[${jsonProductList.join(",")}]',
+        (json) => ProductModel.fromJson(json),
+      );
       return Future.value(products);
     } else {
       throw CacheException('No cached products found');
     }
   }
-}
-
-// You can define CacheException in a separate file for clean error handling
-class CacheException implements Exception {
-  final String message;
-  CacheException(this.message);
-
-  @override
-  String toString() => 'CacheException: $message';
 }
