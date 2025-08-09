@@ -12,33 +12,42 @@ Dependency Inversion
 Network connection checking
 
 ## Architecture Layers
-### domain/
-Defines the contracts and business logic.
 
-entities/ – Plain Dart classes for your core objects (Product).
-
-repositories/ – Abstract class (contract) defining the required repository methods.
-
-usecases/ – Classes for business rules (e.g., GetAllProductsUseCase).
-
-### data/
-Contains data sources, models, and the implementation of the repository.
-
-datasources/
-
-remote_product_data_source.dart – Fetches data from APIs.
-
-local_product_data_source.dart – Fetches/saves data locally.
-
-models/ – DTOs used for JSON conversion.
-
-repositories/ – Implements the contract using data sources.
-
-### core/
-platform/
-
-network_info.dart – Checks internet connection.
-
-error/
-
-exceptions.dart, failures.dart – Error handling helpers.
+```
+📦lib
+ ┣ 📂core
+ ┃ ┣ 📂error
+ ┃ ┃ ┣ 📜exceptions.dart
+ ┃ ┃ ┗ 📜failures.dart
+ ┃ ┣ 📂platform
+ ┃ ┃ ┗ 📜network_info.dart
+ ┃ ┗ 📂utils
+ ┃ ┃ ┗ 📜api_client_helper.dart
+ ┣ 📂features
+ ┃ ┗ 📂products
+ ┃ ┃ ┣ 📂data
+ ┃ ┃ ┃ ┣ 📂datasources
+ ┃ ┃ ┃ ┃ ┣ 📜product_local_data_source.dart
+ ┃ ┃ ┃ ┃ ┗ 📜product_remote_data_source.dart
+ ┃ ┃ ┃ ┣ 📂models
+ ┃ ┃ ┃ ┃ ┗ 📜product_model.dart
+ ┃ ┃ ┃ ┗ 📂repositories
+ ┃ ┃ ┃ ┃ ┗ 📜product_repository_impl.dart
+ ┃ ┃ ┣ 📂domain
+ ┃ ┃ ┃ ┣ 📂entities
+ ┃ ┃ ┃ ┃ ┗ 📜product.dart
+ ┃ ┃ ┃ ┣ 📂repositories
+ ┃ ┃ ┃ ┃ ┗ 📜product_repository.dart
+ ┃ ┃ ┃ ┗ 📂usecases
+ ┃ ┃ ┃ ┃ ┣ 📜create_product.dart
+ ┃ ┃ ┃ ┃ ┣ 📜delete_product.dart
+ ┃ ┃ ┃ ┃ ┣ 📜update_product.dart
+ ┃ ┃ ┃ ┃ ┣ 📜view_all_products.dart
+ ┃ ┃ ┃ ┃ ┗ 📜view_specific_product.dart
+ ┃ ┃ ┗ 📂presentation
+ ┃ ┃ ┃ ┗ 📂bloc
+ ┃ ┃ ┃ ┃ ┣ 📜product_bloc.dart
+ ┃ ┃ ┃ ┃ ┣ 📜product_event.dart
+ ┃ ┃ ┃ ┃ ┗ 📜product_state.dart
+ ┗ 📜main.dart
+ ```
