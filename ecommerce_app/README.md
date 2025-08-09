@@ -1,35 +1,44 @@
-# 🛍️ Flutter eCommerce App (Clean Architecture)
+# Ecommerce Flutter App — Clean Architecture
+This project is a sample Ecommerce app built using Flutter and structured following Clean Architecture principles. It demonstrates how to organize your codebase with:
 
-A modular, scalable, and testable eCommerce application built with **Flutter** using the **Clean Architecture** approach. This app demonstrates domain-driven design, use cases, repository abstraction, and complete test coverage.
+Contracts (Abstract classes/interfaces)
 
----
+Repository pattern
 
-## 📐 Architecture Overview
+Local & Remote Data Sources
 
-This app follows the **Clean Architecture** structure, with separation of concerns into layers:
+Dependency Inversion
 
+Network connection checking
 
----
+## Architecture Layers
+### domain/
+Defines the contracts and business logic.
 
-## 🧩 Features
+entities/ – Plain Dart classes for your core objects (Product).
 
-- View all products
-- View a single product by ID
-- Add a new product
-- Update an existing product
-- Delete a product
-- Domain-level use cases for each feature
-- In-memory data source (easy to replace with API or database)
-- Full unit and widget test coverage
-- Error handling with exception safety
+repositories/ – Abstract class (contract) defining the required repository methods.
 
----
+usecases/ – Classes for business rules (e.g., GetAllProductsUseCase).
 
-## 📦 Technologies
+### data/
+Contains data sources, models, and the implementation of the repository.
 
-- **Flutter**
-- **Dart**
-- **Clean Architecture**
-- **Unit & Widget Testing**
+datasources/
 
----
+remote_product_data_source.dart – Fetches data from APIs.
+
+local_product_data_source.dart – Fetches/saves data locally.
+
+models/ – DTOs used for JSON conversion.
+
+repositories/ – Implements the contract using data sources.
+
+### core/
+platform/
+
+network_info.dart – Checks internet connection.
+
+error/
+
+exceptions.dart, failures.dart – Error handling helpers.
